@@ -1,0 +1,33 @@
+@use "./reboot";
+@use "./fonts";
+@use "./base";
+@use "./bender";
+@use "./footer";
+@use "./idea";
+@use "./info";
+@use "./lead";
+@use "./lead-description";
+@use "./participants";
+@use "./participants-buttons";
+@use "./person";
+@use "./running-line";
+@use "./section-title";
+@use "./stages";
+@use "./stages-buttons";
+@use "./table";
+
+/* Плавный скролл */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}

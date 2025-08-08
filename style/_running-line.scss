@@ -1,0 +1,63 @@
+/* Running line */
+.running-line {
+  align-self: start;
+  padding: 18px 12px;
+  box-sizing: border-box;
+  width: max-content;
+  background-color: #f54932;
+
+  @media screen and (width <= 1100px) {
+    padding: 10px 12px;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    animation: running-line 15s linear infinite;
+
+    @keyframes running-line {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media screen and (width <= 1100px) {
+      animation: running-line 20s linear infinite;
+
+      @keyframes running-line {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font: var(--font-l);
+    font-weight: var(--font-weight-s);
+    font-family: var(--font-family-second);
+    color: var(--tertiary-color);
+    text-transform: uppercase;
+
+    @media screen and (width <= 1100px) {
+      font: var(--font-s);
+      font-weight: var(--font-weight-s);
+      font-family: var(--font-family-second);
+      line-height: 1.1;
+    }
+
+    &::after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background-image: url("../images/marker.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}

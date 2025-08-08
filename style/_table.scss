@@ -1,0 +1,87 @@
+/* Table */
+.table {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  border-collapse: collapse;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 43.5% 56.5%;
+    border-bottom: 2px solid var(--seventh-color);
+
+    @media screen and (width <= 1100px) {
+      width: 100%;
+      padding: 16px 0 14px;
+      display: flex;
+      flex-direction: column;
+      align-self: start;
+      gap: 12px;
+    }
+
+    &:last-child {
+      border-bottom: unset;
+    }
+  }
+  &__row_mob {
+    display: none;
+
+    @media screen and (width <= 1100px) {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+    }
+  }
+  &__row_desk {
+    @media screen and (width <= 1100px) {
+      display: none;
+    }
+  }
+  &__title {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0;
+    text-align: left;
+    font: var(--font-main);
+    font-weight: var(--font-weight-s);
+    color: rgb(49 49 49 / 70%);
+    border-right: 2px solid var(--seventh-color);
+
+    @media screen and (width <= 1100px) {
+      padding: 0;
+      border: none;
+    }
+  }
+  &__text {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 16px;
+    text-align: left;
+    font: var(--font-main);
+    font-weight: var(--font-weight-m);
+    color: var(--primary-color);
+
+    @media screen and (width <= 1100px) {
+      padding: 0;
+    }
+  }
+  &__text_mob {
+    display: none;
+
+    @media screen and (width <= 1100px) {
+      display: flex;
+    }
+  }
+  &__text_crossed {
+    margin-right: 15px;
+    text-decoration: line-through 2px solid var(--fifth-color);
+
+    @media screen and (width <= 1100px) {
+      margin-right: 8px;
+    }
+  }
+  &__text_desk {
+    @media screen and (width <= 1100px) {
+      display: none;
+    }
+  }
+}

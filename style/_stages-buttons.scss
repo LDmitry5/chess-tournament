@@ -1,0 +1,38 @@
+/* Stages buttons */
+.stages {
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+
+    @media screen and (min-width: 765px) {
+      display: none;
+    }
+  }
+  &__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &__dot.active {
+    background: #000;
+  }
+}
+
+button[disabled] {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+button:not(button[disabled]):hover > svg > circle {
+  fill: #fbce51;
+}

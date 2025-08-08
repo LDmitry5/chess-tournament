@@ -1,0 +1,16 @@
+/* Participants buttons */
+.participants {
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+  }
+  &__numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #333;
+  }
+}
